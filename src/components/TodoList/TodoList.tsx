@@ -9,21 +9,26 @@ const initialTodos = [
   { id: nanoid(), title: "Fix the TV 📺", done: false },
 ];
 
+type newToDoPropsInt = {
+  id: any;
+  title: newToDoPropsInt;
+  done: boolean;
 
+}
 
 export function TodoList() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<any[]>(initialTodos);
 
-  function addTodo(newTodoTitle) {
+  function addTodo(newTodoTitle: newToDoPropsInt) {
     const newTodo = {
       id: nanoid(),
       title: newTodoTitle,
       done: false,
     };
-    setTodos([...todos, newTodo]);
+    setTodos:([...todos, newTodo]);
   }
 
-  function updateTodo(id, updatedTodo) {
+  function updateTodo(id: any, updatedTodo: any) {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
@@ -36,7 +41,7 @@ export function TodoList() {
     setTodos(newTodos);
   }
 
-  function deleteTodo(id) {
+  function deleteTodo(id: any) {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
   }
