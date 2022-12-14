@@ -1,11 +1,7 @@
 import { useState } from "react";
 
 type propsExample = {
-  addTodo: any;
-  // type: string;
-  // placeholder: string;
-  // value: any;
-  // onChange: any;
+  addTodo: (newTitle: string) => void
 }
 
 export function AddTodo(props: propsExample) {

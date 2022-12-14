@@ -2,7 +2,7 @@ type TodoTitlePropsInterface = {
   isEditing: boolean;
    isComplete: boolean; 
    title: string;
-  editedTodoTitle: any; 
+  editedTodoTitle: string; 
   setEditedTodoTitle: any;
 }
 

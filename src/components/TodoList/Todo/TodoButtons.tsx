@@ -1,9 +1,9 @@
 type TodoButtonsPropsInterface = {
   isEditing: boolean;
     isComplete: boolean;
-    onClickToggle: any;
-    onClickDelete: any;
-    onClickEditOrDone: any;
+    onClickToggle: React.MouseEventHandler<HTMLButtonElement>;
+    onClickDelete: React.MouseEventHandler<HTMLButtonElement>;
+    onClickEditOrDone: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 

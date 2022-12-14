@@ -4,8 +4,8 @@ import { TodoTitle } from "./TodoTitle";
 
 type todoPropsInterface = {
   todo: any;
-  updateTodo: any;
-  deleteTodo: any;
+  updateTodo: (id: string, updatedTodo: any[]) => void;
+  deleteTodo: (id:string) => void;
 }
 
 export function Todo(props: todoPropsInterface) {
