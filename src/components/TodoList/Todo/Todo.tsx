@@ -4,7 +4,7 @@ import { TodoTitle } from "./TodoTitle";
 
 type todoPropsInterface = {
   todo: any;
-  updateTodo: (id: string, updatedTodo: any[]) => void;
+  updateTodo: (id: string, updatedTodo: (string | boolean)[]) => void;
   deleteTodo: (id:string) => void;
 }
 
