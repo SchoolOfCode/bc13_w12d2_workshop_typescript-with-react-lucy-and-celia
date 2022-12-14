@@ -1,8 +1,17 @@
-export function TodoTitle(props) {
+type TodoTitlePropsInterface = {
+  isEditing: boolean;
+   isComplete: boolean; 
+   title: string;
+  editedTodoTitle: any; 
+  setEditedTodoTitle: any;
+}
+
+
+export function TodoTitle(props: TodoTitlePropsInterface) {
   const { isEditing, isComplete, title, editedTodoTitle, setEditedTodoTitle } =
     props;
 
-  function onTodoTitleChange(e) {
+  function onTodoTitleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newTodoTitle = e.target.value;
     setEditedTodoTitle(newTodoTitle);
   }

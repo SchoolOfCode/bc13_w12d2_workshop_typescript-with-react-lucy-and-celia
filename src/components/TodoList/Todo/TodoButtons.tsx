@@ -1,4 +1,13 @@
-export function TodoButtons(props) {
+type TodoButtonsPropsInterface = {
+  isEditing: boolean;
+    isComplete: boolean;
+    onClickToggle: any;
+    onClickDelete: any;
+    onClickEditOrDone: any;
+}
+
+
+export function TodoButtons(props: TodoButtonsPropsInterface) {
   const {
     isEditing,
     isComplete,
