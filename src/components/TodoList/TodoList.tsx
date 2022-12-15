@@ -11,7 +11,7 @@ const initialTodos = [
 
 
 export function TodoList() {
-  const [todos, setTodos] = useState<any[]>(initialTodos);
+  const [todos , setTodos] = useState(initialTodos);
 
   function addTodo(newTodoTitle: string) {
     const newTodo = {
@@ -22,7 +22,7 @@ export function TodoList() {
     setTodos([...todos, newTodo]);
   }
 
-  function updateTodo(id: string, updatedTodo: any[]) {
+  function updateTodo(id: string, updatedTodo: (string | boolean)[]) {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
