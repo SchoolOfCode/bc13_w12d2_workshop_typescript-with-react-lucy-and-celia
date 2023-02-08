@@ -1,4 +1,13 @@
-export function TodoButtons(props) {
+type TodoButtonsPropsInterface = {
+  isEditing: boolean;
+    isComplete: boolean;
+    onClickToggle: React.MouseEventHandler<HTMLButtonElement>;
+    onClickDelete: React.MouseEventHandler<HTMLButtonElement>;
+    onClickEditOrDone: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+
+export function TodoButtons(props: TodoButtonsPropsInterface) {
   const {
     isEditing,
     isComplete,

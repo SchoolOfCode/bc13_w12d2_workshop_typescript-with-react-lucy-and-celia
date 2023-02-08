@@ -1,11 +1,15 @@
 import { useState } from "react";
 
-export function AddTodo(props) {
+type propsExample = {
+  addTodo: (newTitle: string) => void
+}
+
+export function AddTodo(props: propsExample) {
   const { addTodo } = props;
 
   const [todoTitle, setTodoTitle] = useState("");
 
-  function onChange(e) {
+  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     setTodoTitle(e.target.value);
   }
 

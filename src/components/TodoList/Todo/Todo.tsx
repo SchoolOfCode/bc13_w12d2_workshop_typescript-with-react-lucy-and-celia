@@ -2,7 +2,13 @@ import { useState } from "react";
 import { TodoButtons } from "./TodoButtons";
 import { TodoTitle } from "./TodoTitle";
 
-export function Todo(props) {
+type todoPropsInterface = {
+  todo: any;
+  updateTodo: (id: string, updatedTodo: (string | boolean)[]) => void;
+  deleteTodo: (id:string) => void;
+}
+
+export function Todo(props: todoPropsInterface) {
   const { todo, updateTodo, deleteTodo } = props;
   const { title, isComplete } = todo;
 
